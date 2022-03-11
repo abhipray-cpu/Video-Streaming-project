@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel='stylesheet' href='/css/home.css' />
+    <title>
+        <%= pageTitle %>
+    </title>
+</head>
+
+
+item
+
+<body>
+    <div id="header">
+        <header>
+            <h1>
+                Hawasi
+                <span>
+                    <img src="https://render.fineartamerica.com/images/images-profile-flow/400/images-medium-large-5/neon-lips-ric-bascobert.jpg" alt="Hawasi Logo">
+            </h1>
+        </header>
+        <nav>
+                <a href="/videos">Videos</a>
+                <a href="/images">Images</a>
+                <a href="/onlyFans">Only fans</a>
+                <a href="/live">Live</a>
+                <a href="/messaging">Messaging</a>
+                <a href="/products?page=1&row=nan">Products</a>
+                <a href="/logout">Logout</a>
+                 <a href="/change_password">Change Password</a>
+
+        </nav>
+    </div>
+    <div id="search">
+        <form action="/homeSearch" method="POST">
+            <input type="text" name="value" id="value" placeholder="Search...">
+            <input type="hidden" value="<%= csrfToken %>" name="_csrf">
+        </form>
+    </div>
+    <div class="container1">
+        <div id="left">
+            <h1 style="font-style: italic;text-align:center;margin-bottom:40px">Trending stars</h1>
+            
+                <% if(topStars.length > 0){ %>
+                    <% topStars.forEach(star =>{  %>
+                        <div style="margin-top:20px;margin-bottom:20px;" class="leftItem">
+                            <div class="naam">
+                                <a href="/star/<%=star.name %>" style="margin-bottom:4px"><%= star.name%></a>
+                            </div>
+                            <div class="tasveer">
+                                <img src="/<%= star.image%>" alt="<%= star.name%>">    
+                            </div>  
+                        </div>
+                        <% })%>
+                    <%} else { %>
+                        <li style="margin-top:20px;margin-bottom:20px;">
+                            <a href="/star/Danie Daniels">Danie Daniels</a>
+                        </li>
+                        <li style="margin-top:20px;margin-bottom:20px;">
+                            <a href="/star/Mia Malkova">Mia Malkova</a>
+                        </li>
+                        <li style="margin-top:20px;margin-bottom:20px;">
+                            <a href="/star/Mia Khalifa">Mia Khalifa</a>
+                        </li>
+        
+                        <li style="margin-top:20px;margin-bottom:20px;">
+                            <a href="/star/Sunny Leone">Sunny Lenone</a>
+                        </li>
+                        <li style="margin-top:20px;margin-bottom:20px;">
+                            <a href="/star/Natalia Starr">Natalia Starr</a>
+                        </li>
+                        <li style="margin-top:20px;margin-bottom:20px;">
+                            <a href="/star/Lana Roahdes">Lana Roahdes</a>
+                        </li>
+                        <li style="margin-top:20px;margin-bottom:20px;">
+                            <a href="/star/Autumn Falls">Autumn Falls</a>
+                        </li>
+                        <li style="margin-top:20px;margin-bottom:20px;">
+                            <a href="/star/Alina Lopez">Alina Lopez</a>
+                        </li>
+                        <li style="margin-top:20px;margin-bottom:20px;">
+                            <a href="/star/Adriana Chechik">Adriana Chechik</a>
+                        </li>
+                        <li style="margin-top:20px;margin-bottom:20px;">
+                            <a href="/star/Aaliyah hadid">Aaliyah Hadid</a>
+                        </li>
+                        <% } %>
+            </ul>
+        </div>
+        <% if(stars.length > 0) { %>
+            <div class="container">
+                <% stars.forEach(star=> { %>
+                    <article id="card">
+                        <div id="image">
+                            <img src="<%= star.image %>" alt="<%= star.name %>">
+                        </div>
+                        <div id="details">
+                            <!--this will take the user to the star's main page-->
+                            <a href="/star/<%= star.name %>" style="text-decoration: none">
+                                <h2 style="color:#F8C40C;">
+                                    <%= star.name  %>
+                                </h2>
+                            </a>
+                            <div id="btns">
+                                <!--later on these routes will 
+                                be with params to open
+                            the videos of that specific star-->
+                                <div class="Gridbtns">
+                                    <a href="/star/<%= star.name %>">Videos</a>
+                                </div>
+                                <div class="Gridbtns">
+                                    <a href="/images/<%= star.name %>">Images</a>
+                                </div>
+                                <div class="Gridbtns">
+                                    <a href="">Only fans</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </article>
+
+                    <% }) %>
+            </div>
+            <% } else { %>
+                <div class="container">
+                    <article class="card">
+                        <header class="card_header">
+                            <h1 class="card_title">Danie Daniels</h1>
+                        </header>
+
+                        <div class="card_image">
+                            <img src="/images/danie daniels.jpg" alt="Image of your favourite porn star">
+                        </div>
+                        <div class="card_content">
+                            <h2 class="Price">Price</h2>
+                            <p class="Gender">Gender</p>
+                            <p class="Details">Description</p>
+                        </div>
+                        <div class="card__actions">
+                            <button class="btn" type="submit">
+                                        <a href="/onlyFans" style="text-decoration: none;">Join only fans</a>
+                                    </button>
+                    </article>
+                    <article class="card">
+                        <header class="card_header">
+                            <h1 class="card_title">Danie Daniels</h1>
+                        </header>
+
+                        <div class="card_image">
+                            <img src="/images/danie daniels.jpg" alt="Image of your favourite porn star">
+                        </div>
+                        <div class="card_content">
+                            <h2 class="Price">Price</h2>
+                            <p class="Gender">Gender</p>
+                            <p class="Details">Description</p>
+                        </div>
+                        <div class="card__actions">
+                            <button class="btn" type="submit">
+                                        <a href="/onlyFans" style="text-decoration: none;">Join only fans</a>
+                                    </button>
+                    </article>
+                    <article class="card">
+                        <header class="card_header">
+                            <h1 class="card_title">Danie Daniels</h1>
+                        </header>
+
+                        <div class="card_image">
+                            <img src="/images/danie daniels.jpg" alt="Image of your favourite porn star">
+                        </div>
+                        <div class="card_content">
+                            <h2 class="Price">Price</h2>
+                            <p class="Gender">Gender</p>
+                            <p class="Details">Description</p>
+                        </div>
+                        <div class="card__actions">
+                            <button class="btn" type="submit">
+                                        <a href="/onlyFans" style="text-decoration: none;">Join only fans</a>
+                                    </button>
+                    </article>
+                    </div>
+                    <% } %>
+                        <div id="right">
+                            <ul style="list-style-type: none;">
+                                <li style="margin-top:40px;margin-bottom:40px;">
+                                    <a href="/form">Add Star</a>
+                                </li>
+                                <li style="margin-top:40px;margin-bottom:40px;">
+                                    <a href="/form_production">Add Production</a>
+                                </li>
+                                <li style="margin-top:40px;margin-bottom:40px;">
+                                    <a href="/addImage">Add image</a>
+                                </li>
+                                <li style="margin-top:40px;margin-bottom:40px;">
+                                    <a href="/add-product">Add Product</a>
+                                </li>
+
+                                </ </ul>
+                        </div>
+                        </div>
+                        </div>
+                        <!--adding pagination in this section-->
+                        <div id="pagination">
+                            <% if(hasPrevious > 1) { %>
+
+                                <a href="/home?page=<%= currPage - 1 %>&row=prev">Prev</a>
+                                <% } %>
+
+                                    <a href="/home?page=<%= pages[0] %>&row=nan">
+                                        <%= pages[0] %>
+                                    </a>
+
+
+
+                                    <a href="/home?page=<%= pages[1] %>&row=nan">
+                                        <%= pages[1] %>
+                                    </a>
+
+
+
+                                    <a href="/home?page=<%= pages[2] %>&row=nan">
+                                        <%= pages[2] %>
+                                    </a>
+
+
+
+                                    <a href="/home?page=<%= pages[3] %>&row=nan">
+                                        <%= pages[3] %>
+                                    </a>
+
+
+
+                                    <a href="/home?page=<%= pages[4] %>&row=nan">
+                                        <%= pages[4] %>
+                                    </a>
+
+
+
+                                    <a href="/home?page=<%= pages[5] %>&row=nan">
+                                        <%= pages[5] %>
+                                    </a>
+
+
+                                    <a href="/home?page=<%= pages[6] %>&row=nan">
+                                        <%= pages[6] %>
+                                    </a>
+
+
+
+                                    <a href="/home?page=<%= pages[7] %>&row=nan">
+                                        <%= pages[7] %>
+                                    </a>
+
+
+
+                                    <a href="/home?page=<%= pages[8] %>&row=nan">
+                                        <%= pages[8] %>
+                                    </a>
+
+
+
+                                    <a href="/home?page=<%= pages[9] %>&row=nan">
+                                        <%= pages[9] %>
+                                    </a>
+
+
+
+
+                                    <a href="/home?page=<%= next %>&row=next">Next</a>
+
+                        </div>
+
+
+</body>
+
+</html>

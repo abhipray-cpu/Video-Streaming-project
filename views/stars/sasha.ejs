@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= pageTitle %>
+    </title>
+    <style>
+        #div1 {
+            border: 2px solid gold;
+            padding: 5px 16px;
+            margin: 10px;
+            background: blue;
+        }
+        
+        #div2 {
+            border: 2px solid gold;
+            padding: 5px 16px;
+            margin: 10px;
+            background-color: blue;
+        }
+        
+        #div3 {
+            border: 2px solid gold;
+            padding: 5px 16px;
+            margin: 10px;
+            background-color: blue;
+        }
+        
+        #div4 {
+            border: 2px solid gold;
+            padding: 5px 16px;
+            margin: 10px;
+            background: blue;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        h1:hover {
+            background-color: gold;
+            color: black;
+            font-size: x-large;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        
+        body {
+            margin: 10px;
+        }
+        
+        p,
+        h2,
+        span {
+            color: white
+        }
+        
+        header {
+            background-color: blue;
+            border: 2px solid gold;
+            border-radius: 30px;
+            text-align: center;
+            margin: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: white;
+            font-size: xx-large;
+            font-weight: bolder;
+        }
+        
+        #div3 li {
+            color: white
+        }
+        
+        #div1 img {
+            border: 2px solid black;
+            transition-duration: 3s;
+            box-shadow: 4px 4px 10px rgb(247, 4, 44);
+            height: 199px;
+            width: 263px;
+        }
+        
+        span:hover {
+            background-color: gold;
+            color: black;
+            font-size: larger;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        
+        #div1 {
+            counter-reset: section;
+        }
+        
+        #div1 li h2::before {
+            counter-increment: section;
+            content: "Section" counter(section) ".";
+        }
+        
+        p::selection {
+            background-color: yellow;
+            color: black;
+            text-decoration: underline;
+        }
+        
+        #div3 li {
+            font-size: x-large;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <header>Welcome to the official site of Sasha Grey the teen who survived a pretty rough gang bang</header>
+    <div id="container">
+
+        <div id="div1">
+            <h1>Personal life</h1>
+            <ul style="list-style-type: none;">
+
+                <li>
+                    <img src="data:image/jpeg;base64,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"
+                        alt="Sasha Grey">
+                    <h2>Early Life</h2>
+                    <p> <span>Khalifa moved with her family to the United States in 2001, leaving their home in the wake of the South Lebanon conflict.[3] She was raised Catholic in what she describes as a " very conservative " home,[3] although she is no longer</span>                        a practicing Catholic.[4] She attended a French-language private school in Beirut, where she also learned to speak English.[3] After moving to the United States, she lived in Montgomery County, Maryland, and played lacrosse in
+                        high school. She attended Northwest High School in Germantown, Maryland.[1] She has said she was bullied at school for being "the darkest and weirdest girl there, " which intensified after the September 11 attacks.[3] She attended
+                        Massanutten Military Academy in Woodstock, Virginia, and later graduated from the University of Texas at El Paso with a BA in History.[3][5] She supported herself while there by working as a bartender, model, and "briefcase girl
+                        " on a local Deal or No Deal-esque Spanish game show.[3]</p>
+                </li>
+                <li>
+                    <h2>Pornographic career</h2>
+                    <p>In early 2014, Khalifa and her then-husband posted several pornographic images to a popular NSFW subreddit on Reddit.[6] Khalifa entered the professional pornographic film industry in October 2014.[7] She came to widespread attention
+                        after the release of a scene from BangBros in which she wears a hijab during a threesome with Sean Lawless and Julianna Vega.[3][8] The scene brought Khalifa instant popularity, as well as criticism from writers and religious figures,
+                        and led to her parents publicly disowning her.[3][9] The scene's producer said "We weren 't trying to exploit [Khalifa's ethnicity]. We wanted to embrace it. No one could have anticipated the negativity surrounding it. "[3] Alex
+                        Hawkins, Vice President of Marketing for xHamster, said "The outrage it caused in the Arab world ended up being a bit of a 'Streisand effect'. Suddenly, everyone was searching for her. The effort to censor her only made her more
+                        ubiquitous. "[3] With more than 1.5 million views, the 22-year-old Khalifa became the most searched-for performer on the adult video sharing website Pornhub.[10] On December 28 that year, Pornhub revealed that she was the No. 1
+                        ranked performer on their website."[11] <span>She received online death threats after she ranked No. 1 on Pornhub, including a manipulated image of an Islamic State of Iraq and the Levant executioner preparing
+                    to behead her, and a message warning her that she would go to Hell, to which she replied "I've been meaning to get a little tan recently."[12] Lebanese newspapers wrote articles critical of Khalifa, which she considered trivial due
+                    to other events in the region.[13] Perhaps better known as 'The hijab porn star', Khalifa hit the headlines in 2014 when she infamously humped on camera wearing the traditional Muslim garb. The BangBros film initially sparked outrage
+                    in her home country of Lebanon with haters claiming she had brought disgrace to the nation and insulted Islam.</span> Khalifa stated in an interview with Loaded that she felt she is being made a scapegoat for internet censorship in
+                        her native land, and many others there have since demonstrated against the government, showing support for the American porn star. They claim that although she may have sex, 'She is still more decent than they are'. —Loaded magazine,
+                        July 2016[14] In an interview with The Washington Post, Khalifa said the controversial scene was satirical and should be taken as such, claiming that Hollywood films depicted Muslims in a far more negative light than any pornographer
+                        could.[12] Among those who publicly spoke out to defend her decision to become an adult performer was British-Lebanese author Nasri Atallah, who stated, "The moral indignation ... is wrong for two reasons. First and foremost, as
+                        a woman, she is free to do as she pleases with her body. <span>As a sentient human being with agency, who lives halfway across the world, she is in charge of her own life and owes absolutely nothing to the country where she happened to be born.[11][15]
+                        Khalifa herself said of the controversy: "Women's rights in Lebanon are a long way from being taken seriously if a Lebanese American porn star that no longer resides there can cause such an uproar. What I once boasted to people
+                        as being the most Westernized nation in the Middle East,</span> I now see as devastatingly archaic and oppressed."[12] According to data from Pornhub, from January 3 to 6, 2015, searches for Khalifa increased five-fold. Around
+                        a quarter of those searches came from Lebanon, with substantial searches also from nearby countries Syria and Jordan.[4] Because of the hijab-related controversy, she was ranked No. 5 in a list of "The world's 10 most notorious
+                        porn stars" by British men's magazine Loaded in July 2016.[14] Almaza, a Lebanese brewery, ran an advertisement showing a bottle of their beer next to Khalifa's signature glasses, with the slogan: "We are both rated 18+."[16] In
+                        January 2015, pop band Timeflies released a song titled "Mia Khalifa" in homage to her.[17]</p>
+                </li>
+                <li>
+                    <h2>Other Work</h2>
+                    <p>After three months working as an adult-film actor,[3] Khalifa worked in Miami as a paralegal and bookkeeper.[3] She transitioned into a career as a social media personality, webcam model and sports commentator. She runs a YouTube channel;
+                        <span>live streams on Twitch; and performed as a webcam model; sells photoshoots, merchandise and access to exclusive content on membership website Patreon; and sold explicit photoshoots and videos on the social media website</span>                        Findrow.[3] She and Gilbert Arenas hosted Out of Bounds, a daily sports show on Complex News's YouTube channel, from October 2017 to February 2018.[27] Khalifa was announced to co-host SportsBall alongside Tyler Coe, with its second
+                        season premiering July 16, 2018, exclusively on RoosterTeeth. Its final episode was released on October 30, 2018.[28] In May 2020, she had a guest appearance as herself in the Hulu show Ramy.[29]</p>
+                </li>
+                <li>
+                    <h2>Personal Life</h2>
+                    <p>During her pornographic career, Khalifa lived in Miami before relocating back to Texas.[1] She married her high school boyfriend, whose identity is not public, in February 2011.[34] They separated in 2014 and divorced in 2016.[3] In
+                        <span>March 2019, she became engaged to Swedish chef Robert Sandberg.[35] They were married at their home in June 2020 after their original ceremony was postponed due to the COVID-19 pandemic.[36] Khalifa has a tattoo of the opening
+                        line of the Lebanese National Anthem and another of the Lebanese Forces Cross. She got the latter in 2012 after a bombing in Lebanon, stating it was to "show solidarity with [her] father's political views." Both tattoos have come
+                        under scrutiny by her detractors.[12] She has revealed that her parents stopped speaking to her because of her career choice.[12][9] Her parents released a statement disassociating themselves from her actions and blaming her decision
+                        to enter the porn industry on her residence in a foreign country which had a different culture than theirs, and that her actions did not reflect her upbringing. They also said that they hoped that she would leave pornography,</span>                        believing that her image did not honor her family or home country.[34] Dan Steinberg of The Washington Post observed that, despite Khalifa's change of career, her social media feed was "still a bit more risqué than that of, say,
+                        Ben Bernanke."[1] Khalifa is a fan of Florida State Seminoles football and attempted to recruit Ohio State quarterback Braxton Miller to transfer to Florida State through her social media.[37] After ending her pornographic career,
+                        she has used her social media presence (over 2.3 million Twitter and over 11 million Instagram followers) to support professional sports teams from the Washington, D.C. area,[1] including the Washington Football Team, Washington
+                        Wizards, and Washington Capitals, with her favorite Capitals player being André Burakovsky.[38] She is also a supporter of English football club West Ham United FC.[39] While attending a Premier League game between West Ham and
+                        Arsenal FC at London Stadium in January 2019, she criticized Arsenal player Matteo Guendouzi on social media for diving, which gained much publicity.[40]</p>
+                </li>
+            </ul>
+        </div>
+        <div id="div2">
+            <h1>videos</h1>
+            <video src="" height="240" width="320" controls muted></video>
+            <video src="" height="240" width="320" controls muted></video>
+            <video src="" height="240" width="320" controls muted></video>
+            <video src="" height="240" width="320" controls muted></video>
+            <video src="" height="240" width="320" controls muted></video>
+            <video src="" height="240" width="320" controls muted></video>
+            <video src="" height="240" width="320" controls muted></video>
+            <video src="" height="240" width="320" controls muted></video>
+            <video src="" height="240" width="320" controls muted></video>
+            <video src="" height="240" width="320" controls muted></video>
+            <video src="" height="240" width="320" controls muted></video>
+            <video src="" height="240" width="320" controls muted></video>
+            <video src="" height="240" width="320" controls muted></video>
+            <video src="" height="240" width="320" controls muted></video>
+            <video src="" height="240" width="320" controls muted></video>
+            <video src="" height="240" width="320" controls muted></video>
+            <video src="" height="240" width="320" controls muted></video>
+            <video src="" height="240" width="320" controls muted></video>
+            <video src="" height="240" width="320" controls muted></video>
+            <video src="" height="240" width="320" controls muted></video>
+
+        </div>
+        <div id="div4">
+            <h1>Photo Gallery</h1>
+            <img src="" alt="Danie Daniels">
+            <img src="" alt="Danie Daniels">
+            <img src="" alt="Danie Daniels">
+            <img src="" alt="Danie Daniels">
+            <img src="" alt="Danie Daniels">
+            <img src="" alt="Danie Daniels">
+            <img src="" alt="Danie Daniels">
+            <img src="" alt="Danie Daniels">
+            <img src="" alt="Danie Daniels">
+            <img src="" alt="Danie Daniels">
+            <img src="" alt="Danie Daniels">
+            <img src="" alt="Danie Daniels">
+            <img src="" alt="Danie Daniels">
+            <img src="" alt="Danie Daniels">
+            <img src="" alt="Danie Daniels">
+            <img src="" alt="Danie Daniels">
+            <img src="" alt="Danie Daniels">
+            <img src="" alt="Danie Daniels">
+            <img src="" alt="Danie Daniels">
+            <img src="" alt="Danie Daniels">
+            <img src="" alt="Danie Daniels">
+            <img src="" alt="Danie Daniels">
+            <img src="" alt="Danie Daniels">
+            <img src="" alt="Danie Daniels">
+            <img src="" alt="Danie Daniels">
+            <img src="" alt="Danie Daniels">
+            <img src="" alt="Danie Daniels">
+            <img src="" alt="Danie Daniels">
+            <img src="" alt="Danie Daniels">
+            <img src="" alt="Danie Daniels">
+            <img src="" alt="Danie Daniels">
+            <img src="" alt="Danie Daniels">
+        </div>
+        <div id="div3">
+            <h1>Awards and nominations</h1>
+            <ul style="list-style-type: none;">
+                <li>1)Best porn actress 2016</li>
+                <li>2)Best masturbation video</li>
+                <li>3)best 3some video female</li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

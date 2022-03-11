@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/only_fans.css">
+    <title>
+        <%= pageTitle%>
+    </title>
+</head>
+
+<body style="background-color:black">
+    <header>
+        <h1>Only fans</h1>
+    </header>
+    <% if(stars.length > 0) { %>
+        <div class="container">
+            <% stars.forEach(star=> { %>
+                <article id="card">
+                    <div id="image">
+                        <img src="<%= star.image %>" alt="<%= star.name %>">
+                    </div>
+                    <div id="details">
+                        <!--this will take the user to the star's main page-->
+                        <a href="#" style="text-decoration: none">
+                            <h2 style="color:#F8C40C;">
+                                <%= star.name  %>
+                            </h2>
+                        </a>
+                        <div class="price">
+                            <h2>
+                                $
+                                <%= star.price %>
+                            </h2>
+                        </div>
+                        <div class="description">
+                            <p>
+                                <%= star.description %>
+                            </p>
+                        </div>
+                        <div id="btns">
+                            <!--later on these routes will 
+                            be with params to open
+                        the videos of that specific star-->
+                            <div class="Gridbtns">
+                                <a href="">Join</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <% }) %>
+        </div>
+        <% } else { %>
+            <div class="container">
+                <article class="card">
+                    <header class="card_header">
+                        <h1 class="card_title">Danie Daniels</h1>
+                    </header>
+
+                    <div class="card_image">
+                        <img src="/images/danie daniels.jpg" alt="Image of your favourite porn star">
+                    </div>
+                    <div class="card_content">
+                        <h2 class="Price">Price</h2>
+                        <p class="Gender">Gender</p>
+                        <p class="Details">Description</p>
+                    </div>
+                    <div class="card__actions">
+                        <button class="btn" type="submit">
+                            <a href="/onlyFans" style="text-decoration: none;">Join only fans</a>
+                        </button>
+                </article>
+                <article class="card">
+                    <header class="card_header">
+                        <h1 class="card_title">Danie Daniels</h1>
+                    </header>
+
+                    <div class="card_image">
+                        <img src="/images/danie daniels.jpg" alt="Image of your favourite porn star">
+                    </div>
+                    <div class="card_content">
+                        <h2 class="Price">Price</h2>
+                        <p class="Gender">Gender</p>
+                        <p class="Details">Description</p>
+                    </div>
+                    <div class="card__actions">
+                        <button class="btn" type="submit">
+                            <a href="/onlyFans" style="text-decoration: none;">Join only fans</a>
+                        </button>
+                </article>
+                <article class="card">
+                    <header class="card_header">
+                        <h1 class="card_title">Danie Daniels</h1>
+                    </header>
+
+                    <div class="card_image">
+                        <img src="/images/danie daniels.jpg" alt="Image of your favourite porn star">
+                    </div>
+                    <div class="card_content">
+                        <h2 class="Price">Price</h2>
+                        <p class="Gender">Gender</p>
+                        <p class="Details">Description</p>
+                    </div>
+                    <div class="card__actions">
+                        <button class="btn" type="submit">
+                            <a href="/onlyFans" style="text-decoration: none;">Join only fans</a>
+                        </button>
+                </article>
+
+                </div>
+                <% } %>
+</body>
+
+</html>

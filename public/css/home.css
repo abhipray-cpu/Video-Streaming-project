@@ -1,0 +1,393 @@
+body {
+    background-color: black;
+    width: 100%;
+    height: fit-content;
+    padding: 2px;
+    overflow: auto;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.25rem 1rem;
+    text-decoration: none;
+    font: inherit;
+    background: transparent;
+    border-radius: 3px;
+    cursor: pointer;
+    border: 2px solid #F8C40C
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #F8C40C;
+    color: black;
+}
+
+.btn a {
+    font-size: larger;
+    font-weight: bold;
+    color: inherit;
+}
+
+.heading {
+    background-color: black;
+    color: #F8C40C;
+    margin: 10px;
+    padding: 8px 8px;
+    text-align: center;
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+}
+
+.container1 {
+    display: grid;
+    grid-template-columns: 10fr 40fr 10fr;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    background-color: transparent;
+    padding: 12px 16px;
+}
+
+.container {
+    margin-left: 10px;
+    border: 2px solid transparent;
+    padding: 2px;
+    display: grid;
+    background-color: black;
+    grid-template-columns: 10fr 10fr 10fr;
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+.container * {
+    box-sizing: border-box;
+}
+
+#left {
+    margin-left: 10px;
+    background-color: black;
+    color: #F8C40C;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+}
+
+.leftItem {
+    margin: 5xp
+}
+
+#right ul li {
+    margin: 20px;
+}
+
+.leftItem a {
+    text-decoration: none;
+    padding: 10px 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
+    font-style: italic;
+    color: #F8C40C;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#right li a:hover {
+    color: rgb(240, 8, 46);
+}
+
+#right li a {
+    text-decoration: none;
+    padding: 10px 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 32px;
+    font-style: italic;
+    color: #F8C40C;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#right {
+    border: 2px solid transparent;
+    margin-left: 10px;
+    margin-right: 2px;
+    background-color: black;
+    padding: 2px;
+    color: #F8C40C;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+}
+
+#left h1 {
+    text-decoration: underline;
+    color: #F8C40C;
+}
+
+header h1 {
+    color: rgb(190, 190, 8);
+    font-weight: bold;
+    text-align: center;
+    font-style: italic;
+    font-size: 40px;
+}
+
+header img {
+    width: 60px;
+    height: 40px;
+}
+
+#header nav {
+    margin-top: 3px;
+    margin-left: 350px;
+}
+
+#header nav a {
+    text-decoration: none;
+    color: #F8C40C;
+    font-style: italic;
+    font-weight: bolder;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#header nav a:hover {
+    color: rgb(240, 8, 46);
+}
+
+#card {
+    width: 300px;
+    height: 345px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background: linear-gradient( 45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2));
+    backdrop-filter: blur(4px);
+    box-shadow: 0 0 20px #000;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#card #image img {
+    width: 300px;
+    height: 245px;
+    border-radius: 10px;
+}
+
+#card #details h2 {
+    text-align: center;
+    font-weight: bolder;
+    color: white;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    color: #F8C40C;
+    margin-bottom: 10px;
+}
+
+#btns {
+    display: grid;
+    grid-template-columns: 10fr 10fr 10fr;
+    padding: 2px;
+}
+
+.Gridbtns {
+    width: 80px;
+    height: 20px;
+    background-color: transparent;
+    border: 2px solid #F8C40C;
+    border-radius: 20px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.Gridbtns a {
+    text-decoration: none;
+    color: #F8C40C;
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+.Gridbtns:hover {
+    background-color: #F8C40C;
+}
+
+.Gridbtns:hover a {
+    color: black;
+}
+
+#pagination {
+    margin-left: 20%;
+    margin-top: 10px;
+    padding: 2px;
+}
+
+#pagination a {
+    text-decoration: none;
+    border: 2px solid #F8C40C;
+    font-size: xx-large;
+    height: 80px;
+    width: 72px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #F8C40C;
+    padding: 2px
+}
+
+#pagination a:hover,
+#pagination a:active {
+    background-color: #F8C40C;
+    color: black
+}
+
+#pagination {
+    margin-left: 30%;
+    margin-top: 10px;
+    padding: 2px;
+}
+
+#pagination a {
+    text-decoration: none;
+    border: 2px solid #F8C40C;
+    font-size: xx-large;
+    height: 80px;
+    width: 72px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #F8C40C;
+    padding: 2px
+}
+
+#pagination a:hover,
+#pagination a:active {
+    background-color: #F8C40C;
+    color: black
+}
+
+input {
+    display: block;
+    width: 400px;
+    height: 35px;
+    margin-bottom: 0.25rem;
+    margin-top: 20px;
+    height: 25px;
+    margin-left: 35%;
+}
+
+input::placeholder {
+    color: black
+}
+
+input {
+    border: 1px solid #a1a1a1;
+    font: inherit;
+    border-radius: 2px;
+}
+
+input:focus {
+    outline-color: #b6941b;
+}
+
+#card {
+    -webkit-animation: fadein 2s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 3s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 3s;
+    /* Internet Explorer */
+    -o-animation: fadein 3s;
+    /* Opera < 12.1 */
+    animation: fadein 3s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: .2;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Firefox < 16 */
+
+@-moz-keyframes fadein {
+    from {
+        opacity: .2;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Safari, Chrome and Opera > 12.1 */
+
+@-webkit-keyframes fadein {
+    from {
+        opacity: .2;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Internet Explorer */
+
+@-ms-keyframes fadein {
+    from {
+        opacity: .2;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Opera < 12.1 */
+
+@-o-keyframes fadein {
+    from {
+        opacity: .2;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.tasveer img {
+    width: 5px;
+    height: 5px;
+}
+
+.naam a:hover {
+    color: rgb(240, 8, 46);
+}
+
+.tasveer img:hover {
+    animation-name: imageAnimation;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards
+}
+
+@keyframes imageAnimation {
+    from {
+        width: 50px;
+        height: 40px;
+    }
+    to {
+        width: 150px;
+        height: 120px;
+    }
+}

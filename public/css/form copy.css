@@ -1,0 +1,151 @@
+.heading {
+    background-color: rgb(243, 64, 94);
+    color: white;
+    margin: 10px;
+    padding: 8px 8px;
+    text-align: center;
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    border-radius: 20px;
+}
+
+#container {
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border: 2px solid black;
+    background-color: pink;
+    padding: 12px 16px;
+    border-radius: 20px;
+    overflow: auto;
+}
+
+#left {
+    border: 2px solid black;
+    margin-left: 10px;
+    flex-grow: 1;
+    background-color: rgb(245, 100, 124);
+    padding: 12px 16px;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+    display: none;
+}
+
+#left li {
+    margin: 20px;
+}
+
+#right li {
+    margin: 20px;
+}
+
+#left li a {
+    text-decoration: none;
+    margin-bottom: 100px;
+    padding: 10px 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: x-large;
+    color: white;
+}
+
+#right li a:hover {
+    color: rgb(240, 8, 46);
+}
+
+#right li a {
+    text-decoration: none;
+    margin-bottom: 100px;
+    padding: 10px 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: x-large;
+    color: white;
+}
+
+#left li a:hover {
+    color: rgb(240, 8, 46);
+}
+
+#form {
+    border: 2px solid black;
+    margin-left: 10px;
+    flex-grow: 2;
+    background-color: rgb(173, 20, 45);
+    border-radius: 10px;
+    text-align: center;
+    padding: 12px 16px;
+    order: 2;
+}
+
+#form h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+    font-style: oblique;
+    font-size: large;
+    color: white;
+}
+
+.product-form {
+    max-width: fit-content;
+    margin: auto;
+    display: block;
+}
+
+.form-control {
+    margin: 1rem 0;
+}
+
+.form-control label,
+.form-control input {
+    display: block;
+    width: fit-content;
+    margin-bottom: 0.25rem;
+    height: 25px;
+}
+
+.form-control textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.25rem;
+}
+
+.form-control input,
+.form-control textarea {
+    border: 1px solid #a1a1a1;
+    font: inherit;
+    border-radius: 2px;
+}
+
+.form-control input:focus,
+.form-control textarea:focus {
+    outline-color: pink;
+}
+
+#right {
+    border: 2px solid black;
+    margin-left: 10px;
+    flex-grow: 0.25;
+    background-color: rgb(245, 100, 124);
+    padding: 12px 16px;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+    order: 0;
+}
+
+#form button {
+    border-radius: 10px;
+    padding: 7px 7px;
+    background-color: white;
+    color: rgb(241, 9, 47);
+    font-weight: bold;
+    font-size: x-large;
+    box-shadow: 2px 2px 4px black;
+}
+
+#form button:hover {
+    box-shadow: 2px 2px 1px black;
+}

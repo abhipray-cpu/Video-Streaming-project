@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+
+<body>
+    <header>
+        <h1>
+            Hawasi
+            <span>
+                <img src="https://render.fineartamerica.com/images/images-profile-flow/400/images-medium-large-5/neon-lips-ric-bascobert.jpg" alt="Hawasi Logo">
+        </h1>
+    </header>
+    <% if(error1.length > 0) { %>
+        <div id="Error1">
+            <h3>
+                <%= error1 %>
+            </h3>
+            <ul style="list-style-type:none;">
+                <li>
+                    <div class="option">
+                        <a href="/">
+                            <h4>Try again</h4>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="option">
+                        <a href="/signup">
+                            <h4>Signup</h4>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <% } %>
+            <% if(error2.length > 0) {%>
+                <div id="Error2">
+                    <h3>
+                        <%= error2 %>
+                    </h3>
+                </div>
+                <% } %>
+    <div id="container">
+        <div class="advertisement" style="margin-left:20px;">
+            <img src="/images/leftAdvertise.png" alt="Advertisement">
+        </div>
+        <div id="content">
+            <div id="carousel" style="margin-top:20px">
+                <%- include('./loginCarousel.ejs') %>
+            </div>
+            <div id="form">
+                
+                <form action="/validate_login" method="POST" id="Porn" class="product-form">
+                    <input type="hidden" value="<%= csrfToken %>" name="_csrf">
+                    <% if(error1.length > 0) {%>
+                        <div class="form-error">
+                            
+                            <input type="text" id="Name" name="Name" value="<%= user %>" placehoplaceholder="UserName">
+                        </div>
+                        <% } else {%>
+                            <div class="form-control">
+                               
+                                <input type="text" id="Name" name="Name" value="<%= user %>" placeholder="UserName">
+                            </div>
+                            <% } %>
+                                <% if(error2.length > 0) {%>
+                                    <div class="form-error">
+                                       
+                                        <input type="password" name="password" id="password" placeholder="Password">
+                                    </div>
+                                    <% } else {%>
+                                        <div class="form-control">
+                                         
+                                            <input type="password" name="password" id="password" placeholder="Password">
+                                        </div>
+                                        <% } %>
+
+
+
+                                            <button type="submit" style="margin-left: 310px;" id="button">Login</button>
+                </form>
+            </div>
+        </div>
+        <div class="advertisement" style="margin-right:20px;">
+            <img src="/images/rightAdvertise.png" alt="Advertisement">
+        </div>
+    </div>
+</body>
+
+</html>
