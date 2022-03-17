@@ -4,6 +4,7 @@ const multer = require('multer')
 const path = require('path')
 const bodyParser = require('body-parser')
 const app = express();
+require('dotenv').config()
 const csrf = require('csurf')
 const fileStorage = multer.diskStorage({
         destination: (req, file, cb) => {
@@ -24,7 +25,7 @@ const fileFilter = (req, file, cb) => {
         cb(null, false); //else will return false
     }
 }
-const MONGO_URI = 'mongodb+srv://puttanpal:puttanpal@cluster0.8q8h6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+const MONGO_URI = process.env.MONGO_URI;
 const mongoose = require('mongoose')
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(multer({ storage: fileStorage, fileFilter: fileFilter }).single('image'))
@@ -40,7 +41,7 @@ const Store = new mongoSession({
     collection: 'session'
 })
 app.use(session({
-    secret: "Jackwa aur jillwa gae upar hillwa panya bhran ke waste jackwa girgawa khopdi phatt gawa", // always make sure this key is a good and strong string
+    secret: process.env.SESSION_SECRET, //this secret should be a strong and lengthy string
     resave: false,
     saveUninitialized: false,
     store: Store,
